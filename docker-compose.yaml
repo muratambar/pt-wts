@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pt-wts:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pt-wts:latest
+    container_name: pt-wts
+    volumes:
+      - ./output:/output  # Mount local output folder to /output in the container
